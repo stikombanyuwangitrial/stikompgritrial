@@ -63,21 +63,21 @@ export default function Tumbuhan({ params }) {
               className="w-full h-full lg:h-full object-cover rounded-t-md"
             />
             <div className="overflow-hidden absolute bg-black bg-opacity-50 top-0 left-1/2 transform -translate-x-1/2 rounded-lg w-full h-full px-2 text-xs lg:max-h-screen">
-            <div className='px-2 text-justify h-[410px] overflow-y-auto no-scrollbar'>
-              <div className="font-bold mt-2">&rarr; {item.nama} : {item.subNama}</div>
-              <div className="ml-3.5 mr-2 mt-1">{item.namaLatin}</div>
-              <div className="font-bold mt-4">&rarr; Dari Mana Asal {item.nama}</div>
-              <div className="ml-3.5 mr-2 mt-1">{item.asalUsul}</div>
-              <div className="font-bold mt-4">&rarr; Siklus Hidup {item.nama}</div>
-              <div className="ml-3.5 mr-2 mt-1">{item.siklusHidup}</div>
-              <div className="font-bold mt-4">&rarr; Kenapa {item.nama} Sehat Banget?</div>
-              <div className="ml-3.5 mr-2 mt-1">{item.nutrisi}</div>
-              <div className="font-bold mt-4">&rarr; Varietas {item.nama} Yang Beragam</div>
-              <div className="ml-3.5 mr-2 mt-1">{item.jenis}</div>
-              <div className="font-bold mt-4">&rarr; Menanam {item.nama} Sendiri? Why Not!</div>
-              <div className="ml-3.5 mr-2 mt-1">{item.menanam}</div>
-              <div className="font-bold mt-4">&rarr; Resep Seru Dengan {item.nama}</div>
-              <div className="ml-3.5 mr-2 mt-1 mb-2 ">{item.resep}</div>
+            <div className='px-2 text-justify h-[440px] overflow-y-auto no-scrollbar'>
+              <div className="font-bold mt-2"> {item.nama} : {item.subNama}</div>
+              <div className="mx-2 mt-1">{item.namaLatin}</div>
+              <div className="font-bold mt-4"> Dari Mana Asal {item.nama}</div>
+              <div className="mx-2 mt-1">{item.asalUsul}</div>
+              <div className="font-bold mt-4"> Siklus Hidup {item.nama}</div>
+              <div className="mx-2 mt-1">{item.siklusHidup}</div>
+              <div className="font-bold mt-4"> Kenapa {item.nama} Sehat Banget?</div>
+              <div className="mx-2 mt-1">{item.nutrisi}</div>
+              <div className="font-bold mt-4"> Varietas {item.nama} Yang Beragam</div>
+              <div className="mx-2 mt-1">{item.jenis}</div>
+              <div className="font-bold mt-4"> Menanam {item.nama} Sendiri? Why Not!</div>
+              <div className="mx-2 mt-1">{item.menanam}</div>
+              <div className="font-bold mt-4"> Resep Seru Dengan {item.nama}</div>
+              <div className="mx-2 mt-1 mb-2">{item.resep}</div>
             </div>
             </div>
           </div>
