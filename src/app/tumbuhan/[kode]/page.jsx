@@ -63,7 +63,7 @@ export default function Tumbuhan({ params }) {
               className="w-full h-full lg:h-full object-cover rounded-t-md"
             />
             <div className="overflow-hidden absolute bg-black bg-opacity-50 top-0 left-1/2 transform -translate-x-1/2 rounded-b-lg  max-lg:rounded-r-none w-full h-full px-2 text-xs lg:max-h-screen">
-            <div className='mx-2 px-2 text-justify h-full lg:h-full overflow-y-auto no-scrollbar'>
+            <div className='text-white mx-2 px-2 text-justify h-full lg:h-full overflow-y-auto no-scrollbar'>
               <div className="font-bold mt-2"> {item.nama} : {item.subNama}</div>
               <div className=" mt-1">{item.namaLatin}</div>
               <div className="font-bold mt-4"> Dari Mana Asal {item.nama}</div>
