@@ -42,7 +42,7 @@ export default function Tumbuhan({ params }) {
   if (!item) return <div>Data tidak ditemukan</div>;
 
   return (
-    <div className="p-4 w-full h-full justify-center items-center ">
+    <div className="p-4 w-full h-full bg-black justify-center items-center ">
       <div className="overflow-hidden border border-white w-full max-h-screen lg:h-full rounded-lg">
         <div className="flex flex-col lg:flex-row">
           <div className="relative lg:w-1/2 lg:h-full">
