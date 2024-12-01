@@ -45,10 +45,10 @@ export default function Tumbuhan({ params }) {
     <div className="p-4 w-full h-full bg-black justify-center items-center ">
       <div className="overflow-hidden border border-white w-full max-h-screen lg:h-full rounded-lg">
         <div className="flex flex-col lg:flex-row">
-          <div className="relative lg:w-1/2 lg:h-full">
+          <div className="relative h-full w-full lg:w-2/3 lg:h-auto">
             <img
               src={item.foto}
-              className="w-full h-[250px] lg:h-full object-cover rounded-t-md"
+              className="w-full h-[250px] lg:h-full lg:w-full bg-cover bg-center rounded-t-md"
             />
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 w-full h-14 flex items-center justify-center">
               <div className="text-center text-white font-bold">
@@ -63,7 +63,7 @@ export default function Tumbuhan({ params }) {
               className="w-full h-full lg:h-full object-cover rounded-t-md"
             />
             <div className="overflow-hidden absolute bg-black bg-opacity-50 top-0 left-1/2 transform -translate-x-1/2 rounded-b-lg w-full h-full px-2 text-xs lg:max-h-screen">
-            <div className='mx-2 px-2 text-justify h-[450px] overflow-y-auto no-scrollbar'>
+            <div className='mx-2 px-2 text-justify h-full lg:h-full overflow-y-auto no-scrollbar'>
               <div className="font-bold mt-2"> {item.nama} : {item.subNama}</div>
               <div className=" mt-1">{item.namaLatin}</div>
               <div className="font-bold mt-4"> Dari Mana Asal {item.nama}</div>
