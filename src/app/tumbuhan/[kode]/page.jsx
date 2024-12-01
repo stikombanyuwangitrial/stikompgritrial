@@ -37,7 +37,7 @@ export default function Tumbuhan({ params }) {
     fetchData();
   }, [kode]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div>Memuat...</div>;
   if (error) return <div>{error}</div>;
   if (!item) return <div>Data tidak ditemukan</div>;
 
@@ -62,7 +62,7 @@ export default function Tumbuhan({ params }) {
               src="https://res.cloudinary.com/dgnfgxqem/image/upload/v1732966875/tumbuhan/kgt0pkfa1jjyqfx1mill.jpg"
               className="w-full h-full lg:h-full object-cover rounded-t-md"
             />
-            <div className="overflow-hidden absolute bg-black bg-opacity-50 top-0 left-1/2 transform -translate-x-1/2 rounded-lg w-full h-full px-2 text-xs lg:max-h-screen">
+            <div className="overflow-hidden absolute bg-black bg-opacity-50 top-0 left-1/2 transform -translate-x-1/2 rounded-b-lg w-full h-full px-2 text-xs lg:max-h-screen">
             <div className='mx-2 px-2 text-justify h-[450px] overflow-y-auto no-scrollbar'>
               <div className="font-bold mt-2"> {item.nama} : {item.subNama}</div>
               <div className=" mt-1">{item.namaLatin}</div>
