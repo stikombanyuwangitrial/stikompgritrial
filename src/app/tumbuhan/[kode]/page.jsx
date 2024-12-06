@@ -79,8 +79,8 @@ export default function Tumbuhan({ params }) {
               <div className=" mt-1">{item.budiDaya}</div>
               <div className="font-bold mt-4"> {item.subResep}</div>
               <div className=" mt-1 mb-2">{item.resep}</div>
-              <div className="font-bold mt-4"> {item.subKesimpulan}</div>
-              <div className=" mt-1 mb-2">{item.kesimpulan}</div>
+              {/* <div className="font-bold mt-4"> {item.subKesimpulan}</div>
+              <div className=" mt-1 mb-2">{item.kesimpulan}</div> */}
             </div>
             </div>
           </div>
