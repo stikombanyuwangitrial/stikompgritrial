@@ -21,7 +21,8 @@ export default function Hewan({ params }) {
           .from('hewan')
           .select('*')
           .eq('kode', kode)
-          .single();
+          .limit(1)
+
 
         if (error) throw error;
 

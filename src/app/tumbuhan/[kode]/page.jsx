@@ -21,6 +21,7 @@ export default function Tumbuhan({ params }) {
           .from('tumbuhan')
           .select('*')
           .eq('kode', kode)
+          .limit(1)
           .single();
 
         if (error) throw error;
@@ -66,17 +67,17 @@ export default function Tumbuhan({ params }) {
             <div className='text-white mx-2 px-2 text-justify h-full overflow-y-auto no-scrollbar'>
               <div className="font-bold mt-2"> {item.nama} : {item.subNama}</div>
               <div className=" mt-1">{item.namaLatin}</div>
-              <div className="font-bold mt-4"> Dari Mana Asal {item.nama}</div>
+              <div className="font-bold mt-4"> {item.subAsalusul}</div>
               <div className=" mt-1">{item.asalUsul}</div>
-              <div className="font-bold mt-4"> Siklus Hidup {item.nama}</div>
+              <div className="font-bold mt-4"> {item.subSiklus}</div>
               <div className=" mt-1">{item.siklusHidup}</div>
-              <div className="font-bold mt-4"> Kenapa {item.nama} Sehat Banget?</div>
+              <div className="font-bold mt-4">{item.subNutrisi}</div>
               <div className=" mt-1">{item.nutrisi}</div>
-              <div className="font-bold mt-4"> Varietas {item.nama} Yang Beragam</div>
+              <div className="font-bold mt-4">{item.subJenis}</div>
               <div className=" mt-1">{item.jenis}</div>
-              <div className="font-bold mt-4"> Menanam {item.nama} Sendiri? Why Not!</div>
-              <div className=" mt-1">{item.menanam}</div>
-              <div className="font-bold mt-4"> Resep Seru Dengan {item.nama}</div>
+              <div className="font-bold mt-4">{item.subBudidaya}</div>
+              <div className=" mt-1">{item.budiDaya}</div>
+              <div className="font-bold mt-4"> {item.subResep}</div>
               <div className=" mt-1 mb-2">{item.resep}</div>
             </div>
             </div>

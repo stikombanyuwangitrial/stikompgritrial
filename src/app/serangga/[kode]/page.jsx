@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../../server/subapase';
 
-export default function Hewan({ params }) {
+export default function Serangga({ params }) {
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -17,15 +17,23 @@ export default function Hewan({ params }) {
         setLoading(true);
         setError(null);
 
+        console.log("Kode yang dikirim:", kode);
+
         const { data, error } = await supabase
           .from('serangga')
           .select('*')
           .eq('kode', kode)
-          .single();
+          .limit(1);
 
         if (error) throw error;
 
-        setItem(data);
+        console.log("Data yang diterima:", data);
+
+        if (data && data.length > 0) {
+          setItem(data[0]);  
+        } else {
+          setError('Data tidak ditemukan');
+        }
       } catch (err) {
         setError('Terjadi kesalahan saat mengambil data');
         console.error('Error fetching data:', err.message);
@@ -63,17 +71,17 @@ export default function Hewan({ params }) {
               className="w-full h-full lg:h-full object-cover"
             />
             <div className="overflow-hidden absolute bg-black bg-opacity-50 top-0 left-1/2 transform -translate-x-1/2 rounded-b-lg max-lg:rounded-r-none w-full h-full px-2 text-xs lg:max-h-screen">
-              <div className='text-white mx-2 px-2 text-justify h-full overflow-y-auto no-scrollbar'>
+              <div className="text-white mx-2 px-2 text-justify h-full overflow-y-auto no-scrollbar">
                 <div className="font-bold mt-2"> {item.nama} : {item.subNama}</div>
-                <div className=" mt-1">{item.namaLatin}</div>
-                <div className="font-bold mt-4"> Dari Mana Asal {item.nama}</div>
-                <div className=" mt-1">{item.asalUsul}</div>
-                <div className="font-bold mt-4"> Siklus Hidup {item.nama}</div>
-                <div className=" mt-1">{item.siklusHidup}</div>
-                <div className="font-bold mt-4"> Kenapa {item.nama} Sehat Banget?</div>
-                <div className=" mt-1">{item.nutrisi}</div>
-                <div className="font-bold mt-4"> Varietas {item.nama} Yang Beragam</div>
-                <div className=" mt-1">{item.jenis}</div>
+                <div className="mt-1">{item.namaLatin}</div>
+                <div className="font-bold mt-4">Dari Mana Asal {item.nama}</div>
+                <div className="mt-1">{item.asalUsul}</div>
+                <div className="font-bold mt-4">Siklus Hidup {item.nama}</div>
+                <div className="mt-1">{item.siklusHidup}</div>
+                <div className="font-bold mt-4">Kenapa {item.nama} Sehat Banget?</div>
+                <div className="mt-1">{item.nutrisi}</div>
+                <div className="font-bold mt-4">Varietas {item.nama} Yang Beragam</div>
+                <div className="mt-1">{item.jenis}</div>
               </div>
             </div>
           </div>
