@@ -18,7 +18,7 @@ export default function Hewan({ params }) {
         setError(null);
 
         const { data, error } = await supabase
-          .from('hewan')
+          .from('serangga')
           .select('*')
           .eq('kode', kode)
           .single();
